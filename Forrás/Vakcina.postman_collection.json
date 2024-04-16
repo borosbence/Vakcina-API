@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "db8ab7be-75ba-451c-b723-bc071c40856f",
+		"name": "Vakcina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17404630",
+		"_collection_link": "https://vp-szoft.postman.co/workspace/Backend-programoz%C3%A1s---C%23~cb952c85-4262-43ac-8101-008e0d40d89e/collection/17404630-db8ab7be-75ba-451c-b723-bc071c40856f?action=share&source=collection_link&creator=17404630"
+	},
+	"item": [
+		{
+			"name": "Oltások",
+			"item": [
+				{
+					"name": "Darabszám",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/oltasok/datum",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"oltasok",
+								"datum"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-03-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lekérdezés",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/oltasok",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"oltasok"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Létrehozás",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taj_szam\": 123,\r\n    \"vakcina_id\" : 1,\r\n    \"orvos_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/oltasok",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"oltasok"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Módosítás",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taj_szam\": 16460464\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/oltasok",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"oltasok"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
